@@ -22,6 +22,8 @@ export default function Home() {
                 <p><strong>3 - Treinar:</strong> Por fim, transforme o resto do café em energia para o treino!</p>
             </section>
 
+           
+
         </div>
     )
 }

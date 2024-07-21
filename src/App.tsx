@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa"
 import RouterApp from "./RouterApp"
+import DialogHome from "./components/DialogHome"
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
       <div className="max-w-sm mx-auto">
         <RouterApp />
 
+        <DialogHome />
         <footer className="max-w-sm mx-auto flex justify-around p-4 bg-azul-escuro rounded-t-xl">
           <img className="w-24" src="/icon.svg" alt="logo marca do DevFit" />
           <div className="text-slate-50">
