@@ -9,9 +9,9 @@ export default function Menu() {
             <img className="mx-auto w-40" src="/logo.svg" alt="Logo Marca da Devfit" />
 
             <div className="mt-32 flex flex-wrap items-center justify-center gap-8">
-                <CardMenu name="Treinos" icon={<FaDumbbell/>} />
-                <CardMenu name="Exercícios" icon={<BiDumbbell/>} />
-                <CardMenu name="Medidas" icon={<LuDumbbell/>} />
+                <CardMenu name="Treinos" icon={<FaDumbbell/>} to="/training" />
+                <CardMenu name="Exercícios" icon={<BiDumbbell/>} to="/exercises" />
+                <CardMenu name="Medidas" icon={<LuDumbbell/>} to=""/>
             </div>
         </div>
     )
