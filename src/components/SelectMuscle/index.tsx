@@ -23,15 +23,15 @@ function SelectMuscle({ ...rest }: SelectHTMLAttributes<HTMLSelectElement>) {
     return (
         <div className=" w-full">
             <h1 className="text-lg mb-2 text-laranja">Selecione o Grupo Muscular</h1>
-            <div className="w-full flex gap-4 bg-slate-600 p-3 items-center">
+            <div className="w-full flex gap-4 bg-slate-600 p-3 items-center rounded">
                 <GiMuscleUp className="text-2xl text-creme" />
                 <select
                     {...rest}
-                    className="p-1 w-full bg-transparent rounded focus:outline-none focus:shadow-outline"
+                    className="p-1 ov text-creme text-xl w-full bg-transparent focus:outline-none focus:shadow-outline"
                 >
-                    <option className="bg-slate-600 text-xl text-slate-100" value="" disabled>Escolha um grupo muscular</option>
+                    <option className="bg-slate-600 text-xl text-creme " value="" disabled>Escolha um grupo muscular</option>
                     {muscleGroups.map((muscle) => (
-                        <option className="bg-slate-600 text-xl text-slate-100" key={muscle} value={muscle}>
+                        <option className="bg-slate-600 text-xl text-creme" key={muscle} value={muscle}>
                             {muscle}
                         </option>
                     ))}

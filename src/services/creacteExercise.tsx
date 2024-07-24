@@ -11,7 +11,7 @@ export const createExercise = (exercise: Exercise) => {
     const exercises = JSON.parse(`${localStorage.getItem('exercises')}`) || [];
 
     // Adicionar o novo exercício ao array
-    exercises.push(exercise);
+    exercises.unshift(exercise);
 
     // Salvar o array atualizado no localStorage
     localStorage.setItem('exercises', JSON.stringify(exercises));
