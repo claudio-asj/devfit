@@ -1,19 +1,18 @@
+//JSON.stringify(myData)
+//JSON.parse(localStorage.getItem('myData'))
+
 interface Exercise {
-    nome: string;
+    name: string;
     imgUrl: string;
     targetMuscle: string;
 }
 
-export const createExercise = ({nome, imgUrl, targetMuscle}:Exercise) => {
-    if(localStorage.getItem('exercises')){
-        console.log(localStorage.getItem('exercises'))
-    } else {
-        const exercise = {
-            nome,
-            imgUrl,
-            targetMuscle
-        }
-        localStorage.setItem('exercises', exercise.toString())
-        console.log(localStorage.getItem('exercises'))
-    }
+export const createExercise = (exercise: Exercise) => {
+    const exercises = JSON.parse(`${localStorage.getItem('exercises')}`) || [];
+
+    // Adicionar o novo exercício ao array
+    exercises.push(exercise);
+
+    // Salvar o array atualizado no localStorage
+    localStorage.setItem('exercises', JSON.stringify(exercises));
 }

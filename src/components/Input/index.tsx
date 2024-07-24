@@ -1,12 +1,12 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode} from "react";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
     icon: ReactNode;
     label: string
 }
 
 
-export default function Input({ label, icon, ...rest }: InputProps) {
+export function InputText({ label, icon, ...rest }: InputTextProps) {
     return (
         <div>
             <div className="text-lg mb-2 text-laranja">{label}</div>
